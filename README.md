@@ -1,5 +1,3 @@
-当然可以！下面是一篇完整的 **Discord Ticket Bot 使用教程**，适合放在 GitHub 项目 README、发给朋友或者自己做记录。
-
 ---
 
 # 🎟️ Discord 工单机器人使用教程
@@ -15,14 +13,14 @@
 - 自动 @ 指定用户组，无需手动指派
 - 日志以 HTML 格式存储，包含文字与图片
 - 工单关闭后自动归档日志至指定频道
-- Bot 状态轮换（如 “处理工单” / “帮助用户”等）
+- Bot 状态轮换
 - 一键部署安装脚本（Node.js 环境）
 
 ---
 
 ## 📦 环境要求
 
-- Node.js 16+（推荐 Node.js 18+）
+- Node.js 16+（推荐 Node.js 21）
 - 拥有一个 Discord 机器人账号和 Token
 - 一个 Discord 服务器 + 管理员权限
 
@@ -49,11 +47,11 @@ discord-bot/
 ### 1. 克隆项目
 
 ```bash
-git clone https://github.com/yourname/discord-ticket-bot.git
+https://github.com/mhya123/discord-ticketbot.git
 cd discord-ticket-bot
 ```
 
-### 2. 创建 `.env` 文件
+### 2. 编辑 `.env` 文件
 
 ```env
 BOT_TOKEN=你的Discord机器人Token
@@ -99,8 +97,6 @@ node bot.js
 ### 工单关闭时：
 
 - 收集所有用户对话内容
-- 生成一份 **美化后的 HTML 日志**
-- 文件名包含时间戳，如 `ticket-support-用户ID-2025-04-05T13-12.html`
 - 自动上传日志文件到指定频道
 - 本地日志保存在 `/handlers/logs/`
 
@@ -119,22 +115,6 @@ node bot.js
 </div>
 ```
 
----
-
-## 🤖 状态轮换
-
-机器人登录后会自动轮换状态，例如：
-
-- 正在处理工单
-- 帮助用户
-- 管理服务器
-- 监听反馈
-- 关注你的服务质量
-
-每 10 秒自动切换一次。
-
----
-
 ## 📌 权限建议设置
 
 - `@everyone` 不应能访问 Ticket 子频道
@@ -144,36 +124,11 @@ node bot.js
   - Bot 本身
 
 ---
-
-## 🚀 自定义开发（可选）
-
-想扩展功能？你可以：
-
-- 添加数据库支持（如 MySQL/MongoDB）
-- 对接外部客服系统
-- 添加 Web 后台面板（计划中）
-
----
-
-## 💬 常见问题
-
-### Q: 图片是否也能记录到日志？
-A: 是的。日志中会以链接形式显示所有上传的图片、附件。
-
-### Q: 可以自定义日志频道或角色吗？
-A: 可以，通过 `.env` 中设置 `LOG_CHANNEL_ID` 和 `TICKET_ROLE_ID`。
-
-### Q: 工单支持多种类型吗？
-A: 是的，按钮可以配置为 “技术支持”、“举报”、“投诉”等，不同按钮创建不同类型工单。
-
----
-
 ## 📮 联系支持
 
 如需帮助或定制开发，可联系作者：
-- Discord：`HVHBBS#1640`
-- Email：[可替换成你的邮箱]
+- Discord：`MhYa123#0001`
+- Email：[mhyaaa123@outlook.com]
 
 ---
 
-如需我打包完整代码成 ZIP、写成 GitHub 项目模板，或集成更多管理功能（Web 管理面板等），也可以告诉我~ 😎
